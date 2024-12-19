@@ -7,7 +7,7 @@ const ShowSchools = () => {
 
     useEffect(() => {
         axios
-            .get('http://localhost:5000/getSchools')
+            .get('https://ed-backend-ruby.vercel.app/getSchools')
             .then((response) => setSchools(response.data))
             .catch((error) => console.error('Error fetching schools', error));
     }, []);
@@ -17,7 +17,7 @@ const ShowSchools = () => {
             {schools.map((school) => (
                 <div className="school-card" key={school.id}>
                     <img
-                        src={`http://localhost:5000${school.image}`}
+                        src={school.image}
                         alt={school.name}
                         className="school-image"
                     />

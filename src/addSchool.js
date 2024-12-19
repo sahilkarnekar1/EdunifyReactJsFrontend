@@ -24,7 +24,7 @@ const AddSchool = () => {
         });
     
         try {
-            const response = await axios.post('http://localhost:5000/addSchool', formData, {
+            const response = await axios.post('https://ed-backend-ruby.vercel.app/addSchool', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
             alert(response.data.message);
